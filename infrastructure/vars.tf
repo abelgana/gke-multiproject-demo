@@ -34,12 +34,12 @@ variable "host_project_apis" {
   default = ["container.googleapis.com", "gkeconnect.googleapis.com", "gkehub.googleapis.com", "anthos.googleapis.com", "multiclusteringress.googleapis.com", "cloudresourcemanager.googleapis.com"]
 }
 
-variable "bank_project_apis" {
+variable "bank_svc_project_apis" {
   type    = list(string)
   default = ["container.googleapis.com", "compute.googleapis.com", "meshca.googleapis.com", "meshtelemetry.googleapis.com", "meshconfig.googleapis.com", "iamcredentials.googleapis.com", "gkeconnect.googleapis.com", "gkehub.googleapis.com", "cloudresourcemanager.googleapis.com", "anthos.googleapis.com", "multiclusteringress.googleapis.com", "stackdriver.googleapis.com"]
 }
 
-variable "shop_project_apis" {
+variable "shop_svc_project_apis" {
   type    = list(string)
   default = ["container.googleapis.com", "compute.googleapis.com", "meshca.googleapis.com", "meshtelemetry.googleapis.com", "meshconfig.googleapis.com", "iamcredentials.googleapis.com", "gkeconnect.googleapis.com", "gkehub.googleapis.com", "cloudresourcemanager.googleapis.com", "anthos.googleapis.com", "multiclusteringress.googleapis.com", "stackdriver.googleapis.com"]
 }

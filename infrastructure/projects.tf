@@ -8,28 +8,31 @@ module "host_project" {
   billing_account                = var.billing_id
   activate_apis                  = var.host_project_apis
   enable_shared_vpc_host_project = true
+  folder_id                      = module.main_folder.id
 }
 
 module "bank_svc_project" {
-  source  = "terraform-google-modules/project-factory/google"
+  source  = "terraform-google-modules/project-factory/google//modules/svpc_service_project"
   version = "~> 11.3"
 
-  name                 = var.bank_svc_project
-  random_project_id    = true
-  org_id               = var.org_id
-  billing_account      = var.billing_id
-  activate_apis        = var.bank_svc_project_apis
-  svpc_host_project_id = module.host_project.project_id
+  name              = var.bank_svc_project
+  random_project_id = true
+  org_id            = var.org_id
+  billing_account   = var.billing_id
+  activate_apis     = var.bank_svc_project_apis
+  shared_vpc        = module.host_project.project_id
+  folder_id         = module.main_folder.id
 }
 
 module "shop_svc_project" {
-  source  = "terraform-google-modules/project-factory/google"
+  source  = "terraform-google-modules/project-factory/google//modules/svpc_service_project"
   version = "~> 11.3"
 
-  name                 = var.shop_svc_project
-  random_project_id    = true
-  org_id               = var.org_id
-  billing_account      = var.billing_id
-  activate_apis        = var.bank_svc_project_apis
-  svpc_host_project_id = module.host_project.project_id
+  name              = var.shop_svc_project
+  random_project_id = true
+  org_id            = var.org_id
+  billing_account   = var.billing_id
+  activate_apis     = var.bank_svc_project_apis
+  shared_vpc        = module.host_project.project_id
+  folder_id         = module.main_folder.id
 }

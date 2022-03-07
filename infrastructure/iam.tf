@@ -6,14 +6,14 @@ module "region1_projects_iam_bindings" {
 
   bindings = {
     "roles/compute.networkUser" = [
-      locals.bank_svc_project_gke_sa,
-      locals.bank_svc_project_googleapis_sa,
+      local.bank_svc_project_gke_sa,
+      local.bank_svc_project_googleapis_sa,
     ]
     "roles/compute.securityAdmin" = [
-      locals.bank_svc_project_gke_sa,
+      local.bank_svc_project_gke_sa,
     ]
     "roles/container.hostServiceAgentUser" = [
-      locals.bank_svc_project_gke_sa,
+      local.bank_svc_project_gke_sa,
     ]
   }
 }
@@ -26,14 +26,14 @@ module "region2_projects_iam_bindings" {
 
   bindings = {
     "roles/compute.networkUser" = [
-      locals.shop_svc_project_gke_sa,
-      locals.shop_svc_project_googleapis_sa,
+      local.shop_svc_project_gke_sa,
+      local.shop_svc_project_googleapis_sa,
     ]
     "roles/compute.securityAdmin" = [
-      locals.shop_svc_project_gke_sa,
+      local.shop_svc_project_gke_sa,
     ]
     "roles/container.hostServiceAgentUser" = [
-      locals.shop_svc_project_gke_sa,
+      local.shop_svc_project_gke_sa,
     ]
   }
 }
