@@ -11,7 +11,7 @@ module "host_project" {
   folder_id                      = module.main_folder.id
 }
 
-module "bank_svc_project" {
+module "svc_1_project" {
   source  = "terraform-google-modules/project-factory/google//modules/svpc_service_project"
   version = "~> 11.3"
 
@@ -24,7 +24,7 @@ module "bank_svc_project" {
   folder_id         = module.main_folder.id
 }
 
-module "shop_svc_project" {
+module "svc_2_project" {
   source  = "terraform-google-modules/project-factory/google//modules/svpc_service_project"
   version = "~> 11.3"
 
