@@ -22,6 +22,13 @@ module "svc_1_project" {
   activate_apis     = var.bank_svc_project_apis
   shared_vpc        = module.host_project.project_id
   folder_id         = module.main_folder.id
+  shared_vpc_subnets = [
+    format("projects/%s/regions/%s/subnetworks/%s", module.host_project.project_id, var.region1, "subnet-01")
+  ]
+  depends_on = [
+    module.host_project,
+    module.vpc,
+  ]
 }
 
 module "svc_2_project" {
@@ -35,4 +42,11 @@ module "svc_2_project" {
   activate_apis     = var.bank_svc_project_apis
   shared_vpc        = module.host_project.project_id
   folder_id         = module.main_folder.id
+  shared_vpc_subnets = [
+    format("projects/%s/regions/%s/subnetworks/%s", module.host_project.project_id, var.region2, "subnet-02")
+  ]
+  depends_on = [
+    module.host_project,
+    module.vpc,
+  ]
 }

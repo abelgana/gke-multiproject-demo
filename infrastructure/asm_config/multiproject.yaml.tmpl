@@ -1,0 +1,13 @@
+---
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+spec:
+  profile: asm-gcp-multiproject
+  meshConfig:
+    trustDomainAliases:
+%{ for project in split(",", projects) ~}
+      - "${project}.svc.id.goog"
+%{ endfor ~}
+  values:
+    global:
+      meshID: "${mesh_id}"

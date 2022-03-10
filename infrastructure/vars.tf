@@ -31,17 +31,17 @@ variable "shop_svc_project" {
 
 variable "host_project_apis" {
   type    = list(string)
-  default = ["container.googleapis.com", "gkeconnect.googleapis.com", "gkehub.googleapis.com", "anthos.googleapis.com", "multiclusteringress.googleapis.com", "cloudresourcemanager.googleapis.com"]
+  default = ["cloudtrace.googleapis.com", "container.googleapis.com", "gkeconnect.googleapis.com", "anthos.googleapis.com", "multiclusteringress.googleapis.com", "cloudresourcemanager.googleapis.com"]
 }
 
 variable "bank_svc_project_apis" {
   type    = list(string)
-  default = ["container.googleapis.com", "compute.googleapis.com", "meshca.googleapis.com", "meshtelemetry.googleapis.com", "meshconfig.googleapis.com", "iamcredentials.googleapis.com", "gkeconnect.googleapis.com", "gkehub.googleapis.com", "cloudresourcemanager.googleapis.com", "anthos.googleapis.com", "multiclusteringress.googleapis.com", "stackdriver.googleapis.com"]
+  default = ["cloudtrace.googleapis.com", "container.googleapis.com", "compute.googleapis.com", "meshca.googleapis.com", "meshtelemetry.googleapis.com", "meshconfig.googleapis.com", "iamcredentials.googleapis.com", "gkeconnect.googleapis.com", "cloudresourcemanager.googleapis.com", "anthos.googleapis.com", "multiclusteringress.googleapis.com", "stackdriver.googleapis.com"]
 }
 
 variable "shop_svc_project_apis" {
   type    = list(string)
-  default = ["container.googleapis.com", "compute.googleapis.com", "meshca.googleapis.com", "meshtelemetry.googleapis.com", "meshconfig.googleapis.com", "iamcredentials.googleapis.com", "gkeconnect.googleapis.com", "gkehub.googleapis.com", "cloudresourcemanager.googleapis.com", "anthos.googleapis.com", "multiclusteringress.googleapis.com", "stackdriver.googleapis.com"]
+  default = ["cloudtrace.googleapis.com", "container.googleapis.com", "compute.googleapis.com", "meshca.googleapis.com", "meshtelemetry.googleapis.com", "meshconfig.googleapis.com", "iamcredentials.googleapis.com", "gkeconnect.googleapis.com", "cloudresourcemanager.googleapis.com", "anthos.googleapis.com", "multiclusteringress.googleapis.com", "stackdriver.googleapis.com"]
 }
 
 variable "region1" {
@@ -72,4 +72,8 @@ variable "gke3_master_nodes_cidr" {
 variable "gke4_master_nodes_cidr" {
   default = "172.16.3.0/28"
   type    = string
+}
+
+variable "provisionning_ip" {
+  type = string
 }

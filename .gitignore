@@ -49,3 +49,9 @@ override.tf.json
 terraform.rc
 
 .install.sh
+
+**/*secret*
+**/*kubeconfig*
+infrastructure/asm_config/multiproject1.yaml
+infrastructure/asm_config/multiproject2.yaml
+infrastructure/install_asm*
