@@ -17,31 +17,31 @@ variable "host_project" {
   description = "Host Project name"
 }
 
-variable "bank_svc_project" {
+variable "svc_1_project" {
   type        = string
   default     = "svc1"
-  description = "Bank Prod"
+  description = "sv2 Prod"
 }
 
-variable "shop_svc_project" {
+variable "svc_2_project" {
   type        = string
   default     = "svc2"
-  description = "Shop Prod"
+  description = "svc2 Prod"
 }
 
 variable "host_project_apis" {
   type    = list(string)
-  default = ["cloudtrace.googleapis.com", "container.googleapis.com", "gkeconnect.googleapis.com", "anthos.googleapis.com", "multiclusteringress.googleapis.com", "cloudresourcemanager.googleapis.com"]
+  default = ["gkehub.googleapis.com", "cloudtrace.googleapis.com", "container.googleapis.com", "gkeconnect.googleapis.com", "anthos.googleapis.com", "multiclusteringress.googleapis.com", "cloudresourcemanager.googleapis.com"]
 }
 
-variable "bank_svc_project_apis" {
+variable "svc_1_project_apis" {
   type    = list(string)
-  default = ["cloudtrace.googleapis.com", "container.googleapis.com", "compute.googleapis.com", "meshca.googleapis.com", "meshtelemetry.googleapis.com", "meshconfig.googleapis.com", "iamcredentials.googleapis.com", "gkeconnect.googleapis.com", "cloudresourcemanager.googleapis.com", "anthos.googleapis.com", "multiclusteringress.googleapis.com", "stackdriver.googleapis.com"]
+  default = ["gkehub.googleapis.com", "cloudtrace.googleapis.com", "container.googleapis.com", "compute.googleapis.com", "meshca.googleapis.com", "meshtelemetry.googleapis.com", "meshconfig.googleapis.com", "iamcredentials.googleapis.com", "gkeconnect.googleapis.com", "cloudresourcemanager.googleapis.com", "anthos.googleapis.com", "multiclusteringress.googleapis.com", "stackdriver.googleapis.com"]
 }
 
-variable "shop_svc_project_apis" {
+variable "svc_2_project_apis" {
   type    = list(string)
-  default = ["cloudtrace.googleapis.com", "container.googleapis.com", "compute.googleapis.com", "meshca.googleapis.com", "meshtelemetry.googleapis.com", "meshconfig.googleapis.com", "iamcredentials.googleapis.com", "gkeconnect.googleapis.com", "cloudresourcemanager.googleapis.com", "anthos.googleapis.com", "multiclusteringress.googleapis.com", "stackdriver.googleapis.com"]
+  default = ["gkehub.googleapis.com", "cloudtrace.googleapis.com", "container.googleapis.com", "compute.googleapis.com", "meshca.googleapis.com", "meshtelemetry.googleapis.com", "meshconfig.googleapis.com", "iamcredentials.googleapis.com", "gkeconnect.googleapis.com", "cloudresourcemanager.googleapis.com", "anthos.googleapis.com", "multiclusteringress.googleapis.com", "stackdriver.googleapis.com"]
 }
 
 variable "region1" {
