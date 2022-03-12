@@ -45,3 +45,15 @@ terraform apply -f default.tfvars
 ```
 
 This should setup the GKE along with ASM
+
+## Test
+
+To test that everything is working we deploy a sample app. To do that run the script `test.sh`.
+
+# Congratulation
+
+You hav succeffully deployed a multi-project ASM setup using terraform.
+
+# TODO
+
+Use remote state file instead of local state file
